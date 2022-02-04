@@ -1,6 +1,5 @@
 /// <summary>
-/// author Pete Lowe May 2019
-/// you need to change the above line or lose marks
+///author James Murray
 /// </summary>
 #ifndef GAME_HPP
 #define GAME_HPP
@@ -30,13 +29,15 @@ private:
 	
 	void setupFontAndText();
 	void setupSprite();
+	void makeCircle();
+
+	float screenWidth = 800.0;
+	float screenHeight = 600.0;
 
 	sf::RenderWindow m_window; // main SFML window
 	sf::Font m_ArialBlackfont; // font used by message
-	sf::Text m_welcomeMessage; // text used for message on screen
-	sf::Texture m_logoTexture; // texture used for sfml logo
-	sf::Sprite m_logoSprite; // sprite used for sfml logo
 	bool m_exitGame; // control exiting game
+	sf::CircleShape m_shell{ 50.0f }; // shell
 
 };
 
