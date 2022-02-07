@@ -30,6 +30,7 @@ private:
 	void setupFontAndText();
 	void setupSprite();
 	void makeCircle();
+	void splashScreen();
 
 	float screenWidth = 800.0;
 	float screenHeight = 600.0;
@@ -38,6 +39,9 @@ private:
 	sf::Font m_ArialBlackfont; // font used by message
 	bool m_exitGame; // control exiting game
 	sf::CircleShape m_shell{ 50.0f }; // shell
+	sf::Sprite m_splashScreen; // splashscreen
+	sf::Texture m_splashScreenT; // splashscreen texture
+	short countSplash = 0;
 
 };
 

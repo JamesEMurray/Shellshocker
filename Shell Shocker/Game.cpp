@@ -109,9 +109,16 @@ void Game::update(sf::Time t_deltaTime)
 /// </summary>
 void Game::render()
 {
+	if (countSplash == 0)
+	{
+		splashScreen();
+		countSplash++;
+	}
+
 	m_window.clear(sf::Color::White);
 	m_window.draw(m_shell);
-	m_window.display();
+
+	m_window.display(); // prints to screen what has been drawn
 }
 
 /// <summary>
@@ -130,11 +137,33 @@ void Game::setupFontAndText()
 /// </summary>
 void Game::setupSprite()
 {
-
+	if (!m_splashScreenT.loadFromFile("ASSETS\\IMAGES\\splashScreen.png"))
+	{
+		//error message
+		std::cout << "Problem loading splashScreen" << std::endl;
+	}
+	m_splashScreen.setTexture(m_splashScreenT);
+	m_splashScreen.setPosition(0.0f, 0.0f);
 }
 
 void Game::makeCircle()
 {
 	m_shell.setFillColor(sf::Color::Green);
-	m_shell.setPosition(screenWidth / 2, screenHeight / 2);
+	m_shell.setPosition((screenWidth / 2) - 50, (screenHeight / 2) - 50);
+}
+
+void Game::splashScreen()
+{
+	short secEllapsed = 0;
+
+	while (secEllapsed <= 3)
+	{
+		//timer
+		secEllapsed = clock() / CLOCKS_PER_SEC;
+
+		m_window.clear(sf::Color::White);
+		m_window.draw(m_splashScreen);
+		m_window.display();
+	}
+
 }

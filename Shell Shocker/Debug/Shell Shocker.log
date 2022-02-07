@@ -1,2 +1,5 @@
 ﻿  Game.cpp
+G:\Games\ShellShock\Shell Shocker\Shell Shocker\Game.cpp(162,25): warning C4244: '=': conversion from 'clock_t' to 'short', possible loss of data
+  main.cpp
+  Generating Code...
   Shell Shocker.vcxproj -> G:\Games\ShellShock\Shell Shocker\Debug\Shell Shocker.exe
