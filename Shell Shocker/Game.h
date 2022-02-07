@@ -9,6 +9,7 @@
 /// Don't forget the endif at the bottom
 /// </summary>
 #include <SFML/Graphics.hpp>
+#include "MyVector2.h"
 
 class Game
 {
@@ -30,7 +31,8 @@ private:
 	void setupFontAndText();
 	void setupSprite();
 	void makeCircle();
-	void splashScreen();
+	void splashScreen(); //displays the splash screen (3 seconds)
+	void circleMove(); // temp - When game begins, circle moves
 
 	float screenWidth = 800.0;
 	float screenHeight = 600.0;

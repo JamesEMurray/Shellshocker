@@ -102,6 +102,9 @@ void Game::update(sf::Time t_deltaTime)
 	{
 		m_window.close();
 	}
+
+	//temp code: Start circle movement when game begins - assign the velocity to the position, not to the sprite itself
+
 }
 
 /// <summary>
@@ -165,5 +168,14 @@ void Game::splashScreen()
 		m_window.draw(m_splashScreen);
 		m_window.display();
 	}
+
+}
+
+//temp version, for commit 3
+void Game::circleMove()
+{
+	//set position
+
+	//assign velocity to position
 
 }
