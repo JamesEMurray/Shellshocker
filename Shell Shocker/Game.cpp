@@ -174,8 +174,5 @@ void Game::splashScreen()
 //temp version, for commit 3
 void Game::circleMove()
 {
-	//set position
-
-	//assign velocity to position
-
+	
 }
